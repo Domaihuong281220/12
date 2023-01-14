@@ -1,0 +1,56 @@
+@media (max-width:2600px) and (min-width: 1300px) {
+    ._button {
+        background-color: transparent;
+        padding: 1rem 2rem;
+        border: 1.5px solid #f8ccc3;
+        /* border-radius: 2rem; */
+        font-size: 1.1rem;
+        color: #fbbc7c;
+        cursor: pointer;
+        transition:  all .2s ease-in;
+        box-shadow: var(--box-shadow);
+        
+    }
+    
+    ._button:hover {
+        transition:  all .2s ease-in;
+        cursor: pointer;
+        background-color: #0f0e0e4f;
+        border: 2.5px solid #f8ccc3;
+        color: #f7c696;
+        padding: 1.2rem 2.2rem;
+        font-size: 1.2rem;
+    }
+    
+    ._button:active {
+       opacity: 0.8;
+    }
+}
+@media (max-width:1399px) and (min-width: 900px) {
+    ._button {
+        background-color: transparent;
+        padding: 0.5rem 1rem;
+        border: 1.5px solid #f8ccc3;
+        /* border-radius: 2rem; */
+        font-size: 1rem;
+        color: #fbbc7c;
+        cursor: pointer;
+        transition:  all .2s ease-in;
+        box-shadow: var(--box-shadow);
+        margin: 0;
+    }
+    
+    ._button:hover {
+        transition:  all .2s ease-in;
+        cursor: pointer;
+        background-color: #0f0e0e4f;
+        border: 2.5px solid #f8ccc3;
+        color: #f7c696;
+        padding: 1.2rem 2.2rem;
+        font-size: 1.2rem;
+    }
+    
+    ._button:active {
+       opacity: 0.8;
+    }
+}

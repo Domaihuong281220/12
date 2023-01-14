@@ -1,0 +1,120 @@
+.landingpage-header {
+    background: url("../../assets/Pictures/header.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 1rem;
+    position: relative;
+    z-index: 1;
+}
+.slogan1{
+    position: absolute;
+    top: 8%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #824a1f;
+    font-size: 1.5rem;
+    font-weight: 1000;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 0rem;
+    z-index: 2;   
+}
+.slogan2{
+    position: absolute;
+    top: 11%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #824a1f;
+    font-size: 100%;
+    font-weight: 700;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    z-index: 2;
+}
+.searchbar{
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #f7b4a7;
+    font-size: 100%;
+    font-weight: 700;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    z-index: 2;   
+}
+.brandname{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #562c05;
+    font-size: 7.5rem;
+    font-weight: 900;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    letter-spacing: 0.2rem;
+    text-shadow: 0.05113359em 0.02222123em 0.0575em rgba(167, 121, 93, 0.83);
+    font-style:italic;
+    z-index: 2;
+    padding: 0; 
+    margin: 0;
+    width: 100%;;  
+}
+.slogan3{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #683209;
+    font-size: 1.3rem;
+    font-weight: 600;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    z-index: 2;
+}
+.headerbtn{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #683209;
+    background-color: #d0ae70;
+    font-size: 1.3rem;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    z-index: 2;
+    box-sizing: border-box;
+    border-radius: 6px;
+    padding: 0 !important;
+}
+.headerbtn:hover{
+    background-color: #c7a15a;
+    color: #683209;
+}
+
+.headerbtn div button{
+    border: 1px solid #683209 !important;
+    color: #683209 !important;
+    font-size: 2rem !important;
+    padding: 0.5rem 3rem !important;
+    height: fit-content;
+    box-shadow: 8px 10px 10px #562c05 !important;	
+}

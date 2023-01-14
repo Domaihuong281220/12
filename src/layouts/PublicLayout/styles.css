@@ -1,0 +1,6 @@
+.publiclayout-container {
+    /* background: linear-gradient(to right, rgba(34, 33, 33, 0.7), rgba(20, 20, 20, 0.1)), url("../../assets/Pictures/background.jpg"); */
+    height: 120vh;
+    background-position: center;
+    background-size: cover;
+}
