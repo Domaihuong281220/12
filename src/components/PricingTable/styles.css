@@ -1,53 +1,152 @@
-.pricing {
+.pricing{
   width: 100%;
-  padding: 6rem 1rem;
-  background: var(--main-bg-color-2);
+  height: 100%;
+  padding:  0;
+  background-color: #d0ae70;
+  margin: 0 !important;
+}
+.container{
+  width: 100%;
+  padding: 5rem 0 ;
+  height: 100%;
+  background-color: #d0ae70;
+  margin: 0 !important;
+}
+.container .left img{
+  width: 100%;
+}
+.container .right{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.pricing-card_container {
-  max-width: 1140px;
-  margin: auto;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 40px;
+.container .right img{  
+  width: 100%;
+  padding: 0 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;  
 }
-
-.pricing-card {
-  background: var(--main-bg-color-3);
-  border: 1px solid #333;
-  color: var(--main-txt-color);
+.container .right .p{
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.6rem;
+  font-weight: 550;
+  color: #4d3f28;
+  margin-bottom: 1.5rem;
+  padding: 0 10%;
   text-align: center;
-  padding: 1rem;
-  border-radius: var(--border-radius);
-  box-shadow: var(--box-shadow);
-}
-
-.pricing-card h3 {
-  font-size: 1.4rem;
-  padding: 1rem;
-}
-
-.pricing-card p {
-  padding: 10px 0;
-}
-
-.bar {
-  border-bottom: 1px solid var(--main-txt-color);
-  width: 10%;
-  margin: 1.5rem auto;
-  display: block;
-}
-
-.btc {
-  font-size: 4rem;
-  font-weight: 600;
-  padding: 1rem 0;
-}
-
-@media screen and (max-width: 740px) {
-  .pricing-card_container {
-    max-width: 90%;
-    margin: auto;
-    grid-template-columns: 1fr;
   }
+  .row2{
+    background: url("../../assets/Pictures/coffee3.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    /* height: 100%; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 1rem;
+    position: relative;
+    z-index: 1;
+  }
+  .product{
+    width: 100%;
+    height: 100%;
+    margin: 0 !important;
+  }
+  .slogan1{
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #824a1f;
+    font-size: 3rem;
+    font-weight: 700;
+    font-family: 'Purple Purse', cursive;
+    letter-spacing: 0rem;
+    z-index: 2;   
+  }
+  .slogan2{
+    position: absolute;
+    top: 16%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #824a1f;
+    font-size: 100%;
+    font-weight: 700;
+    font-family: 'Purple Purse', cursive;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    z-index: 2;
+  }
+  .searchbar{
+    position: absolute;
+    top: 23%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #f7b4a7;
+    font-size: 100%;
+    font-weight: 700;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    z-index: 2;   
+  }
+
+.productarea{
+  padding: 0 5rem !important;
 }
+.productarea .product{
+  width: 100%;
+  height: 100%;
+  margin: 0 !important;
+  }
+  .product1info, .product2info, .product3info, .product4info{
+    width: 100%;
+    height: 100%;
+    margin: 0 !important;
+    text-align: center;
+  }
+  .productlist{
+    width: 100%;
+    height: 100%;
+    margin:0 !important;
+    text-align: center;
+    padding-top: 20%;
+    }
+    .product1, .product2, .product3, .product4{
+      padding: 5rem 0;
+    }
+    .product1info, .product2info, .product3info, .product4info{
+      padding: 20% 12%;
+      background-color: #d0ae70;
+      border-radius: 20px;
+
+    }
+    .product1-4, .product2-4, .product3-4, .product4-4{
+      width: 100%;
+    }
+    .product1-4 img, .product2-4 img, .product3-4 img, .product4-4 img{
+      width: 100%;
+      padding: 0 10%;
+    }
+    .productname{
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #824a1f;
+    }
+    .productprice, .productsize{
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 1rem;
+      font-weight: 700;
+      color: #4d3f28;
+    }

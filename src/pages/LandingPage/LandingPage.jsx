@@ -11,7 +11,7 @@ function LandingPage(props) {
     <>
       <AboutUs />
       <PricingTable data={productData} />
-      <Feature videoUrl={promoteVid} type="video/mp4" />
+      {/* <Feature videoUrl={promoteVid} type="video/mp4" /> */}
       <Collection data={productDataTwo} heading={t("landingpage.collection")} />
     </>
   );

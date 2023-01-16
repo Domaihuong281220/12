@@ -55,6 +55,12 @@
     text-transform: uppercase;
     z-index: 2;   
 }
+.searchbar input{
+    padding: 0.8rem 0.8rem;
+}
+.searchbar button{
+    padding: 1.49rem 1.8rem !important;
+}
 .brandname{
     position: absolute;
     top: 40%;
