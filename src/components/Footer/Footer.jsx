@@ -8,50 +8,32 @@ import {
   FaLinkedin,
   FaTwitter,
 } from "react-icons/fa";
+import { Button, Radio, Space, Divider } from 'antd';
 import { withTranslation } from "react-i18next";
+import { Col, Row } from "antd";
 
 function Footer(props) {
   const { t } = props;
 
   return (
     <div className="footer">
-      <div className="footer-container">
-        <div className="footer-left">
-          <div className="footer-location">
-            <FaHome size={20} className="footer-icons" />
-            <div>
-              <p>{t("footer.address")}</p>
-              <p>{t("footer.VietNam")}</p>
-            </div>
-          </div>
-          <div className="footer-phone">
-            <h4>
-              <FaPhone size={20} className="footer-icons" />
-              0965180127
-            </h4>
-          </div>
-          <div className="footer-email">
-            <h4>
-              <FaMailBulk size={20} className="footer-icons" />
-              liemld@1cinnovation.com
-            </h4>
-          </div>
-        </div>
-        <div className="footer-right">
-          <h4>{t("footer.aboutTheCompany")}</h4>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet
-            quos corporis numquam itaque neque nobis commodi aperiam possimus
-            similique veritatis distinctio, ex sint ab, odit assumenda
-            consequuntur voluptatum illo est.
-          </p>
-          <div className="footer-social">
-            <FaFacebook size={20} className="footer-icons" />
-            <FaLinkedin size={20} className="footer-icons" />
-            <FaTwitter size={20} className="footer-icons" />
-          </div>
-        </div>
-      </div>
+      <Row gutter={[16, 24]} className="footer-content">
+        <Col className="gutter-row footer-row1" span={24} >
+          <div></div>
+        </Col>
+        <Col className="gutter-row footer-row2" span={24} >
+          <div></div>
+        </Col>
+        <Col className="gutter-row footer-row3" span={24} >
+          {/* <Button>Contact us</Button> */}
+        </Col>
+        <Col className="gutter-row footer-row4" span={24} >
+          <div>(04) 298 3985 2092</div>
+          <div>+76 209 1092 4095</div>
+          <div>info@mollysrestaurant.com</div>
+          <Button>Contact us</Button>
+        </Col>
+      </Row>
     </div>
   );
 }

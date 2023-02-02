@@ -4,15 +4,16 @@ import { Outlet } from "react-router-dom";
 import { NavBar, FooterCom, Header } from "../../components";
 
 function PublicLayout() {
-  
+
   return (
     <>
       {/* <NavBar /> */}
       <div className="publiclayout-container">
-        <Header />
+        {/* <Header /> */}
+        <Outlet />
+        <FooterCom />
       </div>
-      <Outlet />
-      <FooterCom />
+
     </>
   );
 }

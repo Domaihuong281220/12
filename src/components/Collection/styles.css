@@ -1,15 +1,15 @@
 
-.collection-content{
+.collectionandsell{
     background: url("../../assets/Pictures/coffee4.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    height: 100vh;
+    height: fit-content;
     width: 100%;
 }
 .collection-2row{
     background-color: rgba(11, 10, 10, 0.584);
-    height: 100%;
+    height: 100vh;
 }
 .collection-heading{
     color: #edd0bb;
@@ -45,4 +45,18 @@
     font-size: 1.2rem;
     font-weight: 800;
     padding-top: 1rem;
+}
+
+.body2{
+    padding: 0 20% !important;
+    background: url("../../assets/Pictures/coffee7.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 120vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -1.9% !important;
 }

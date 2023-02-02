@@ -26,29 +26,26 @@ function Header(props) {
     />
   );
   const [size, setSize] = useState('large');
+  const onSearch = (value: string) => console.log(value); 
 
   return (
     <div className="landingpage-header">
       <Row gutter={[16, 24]}>
-        <Col className="gutter-row slogan1" span={24}>
-          <div>Find your best flavor</div>
-        </Col>
-        <Col className="gutter-row slogan2" span={24}>
-          <div>It's coffee time!</div>
-        </Col>
+
         <Col className="gutter-row searchbar" span={24}>
           <div>
-            <Search 
-              placeholder="Find your product"
-              onSearch={handleNavigateDayCare}
-              style={{
-                width: 300
-              }}/>
+            <Search
+              placeholder="Input product's serial number"
+              enterButton="Search"
+              size="large"
+              suffix={suffix}
+              onSearch={onSearch}
+            />
           </div>
         </Col>
         <Col className="gutter-row brandname" span={24}>
           <div>
-              Coffee Roastery
+            Coffee Roastery
           </div>
         </Col>
         <Col className="gutter-row slogan3" span={24}>

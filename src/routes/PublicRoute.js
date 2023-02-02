@@ -1,4 +1,4 @@
-import { LandingPage } from "../pages";
+import { LandingPage, ProductsPage} from "../pages";
 
 const routes = [
     {
@@ -7,6 +7,12 @@ const routes = [
       component: <LandingPage />,
       main: () => <LandingPage />,
     },
+    {
+      path: "/products",
+      exact: true,
+      component: <ProductsPage />,
+      main: () => <ProductsPage />,
+    }
   ];
   
   export default routes;

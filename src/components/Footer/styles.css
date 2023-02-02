@@ -1,57 +1,61 @@
-.footer {
-  width: 100%;
-  padding: 1rem 0;
-  background-color: var(--main-bg-color);
+.footer{
+  background: url("../../assets/Pictures/coffee7.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  /* background-attachment: fixed; */
+  height: 100vh;
 }
-
-.footer-container {
-  max-width: 1140px;
-  margin: auto;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 40px;
+.footer-row1{
+  color: rgb(226, 153, 85);
+  text-shadow: -1px 0 rgba(59, 38, 13, 0.845), 0 5px 5px rgba(61, 38, 8, 0.511),      5px 0 10px rgba(58, 31, 16, 0.868), 0 -1px rgba(14, 10, 2, 0.831);
+  font-family: 'Rampart One', cursive;
+  font-size: 4rem;
+  font-weight: bolder;
+  text-align: center;
+  padding: 2rem 0 0 0;
 }
-
-.footer-left,
-.footer-right {
-  height: 100%;
-  max-width: 100%;
-  display: flex;
-  flex-direction: column;
-  padding: 1rem;
+.footer-row2{
+  color: rgb(226, 177, 121);
+  text-shadow: -1px 0 rgba(59, 38, 13, 0.845), 0 5px 10px rgba(61, 38, 8, 0.511),      5px 0 10px rgba(58, 31, 16, 0.868), 0 -1px rgba(14, 10, 2, 0.831);
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1rem;
+  font-weight: bolder;
+  text-align: center;
+  padding: 1rem 0 0 0;
 }
-
-.footer-location {
-  display: flex;
-  margin-bottom: 0.8rem;
+.footer-row4 button {
+  padding: 1.5rem 6rem;
+  background-color: rgb(192, 149, 32);
+  border-color: rgb(65, 28, 4);
+  border-radius: 1rem;
+  box-shadow: 1px 5px 10px #562c05 !important;
+  position: absolute;
+  left: 30%;
+  bottom: -35%;
 }
-
-.footer-location p {
-  line-height: 30px;
+.footer-row3{
+padding: 5% 45% !important;
 }
-
-.footer-icons {
-  color: var(--main-txt-color);
-  margin-right: 2rem;
+.footer-row4 button span{
+  font-size: 1.5rem;
+  font-weight: bolder;
+  font-family: 'Courier New', Courier, monospace;
+  position: absolute;
+  bottom: 10%;
+  right: 10%;
+  color: rgb(43, 24, 1); 
 }
-
-.footer-social {
-  margin-top: 1rem;
-}
-
-.footer-container h4 {
-  font-size: 1.2rem;
-  padding-bottom: 0.7rem;
-  color: var(--main-txt-color);
-}
-
-.footer-container p {
-  font-size: 1.2rem;
-  color: var(--main-txt-color);
-}
-
-@media screen and (max-width: 640px) {
-  .footer-container {
-    grid-template-columns: 1fr;
-  }
+.footer-row4{
+  margin-top: 25%;
+  font-family: 'Courier New', Courier, monospace;
+  color: #e2c9ac;
+  font-size: 2.2rem;
+  font-weight: bolder;
+  position: absolute;
+  top: 120%;
+  left: 50%;
+  letter-spacing: 0.1rem;
+  line-height: 3rem;
+  text-shadow: -2px 0 #B76E22, 0 2px 1px #B76E22,      0px 0 1px #B76E22, 0 1px #B76E22;
 }
