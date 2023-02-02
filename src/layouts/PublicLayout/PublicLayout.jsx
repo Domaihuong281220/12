@@ -11,7 +11,7 @@ function PublicLayout() {
       <div className="publiclayout-container">
         {/* <Header /> */}
         <Outlet />
-        <FooterCom />
+        
       </div>
 
     </>
