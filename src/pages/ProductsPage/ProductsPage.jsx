@@ -3,6 +3,9 @@ import React from "react";
 import "./style.css";
 import product1 from "../../assets/Pictures/product1.jpg";
 import product1_2 from "../../assets/Pictures/product1-2.jpg";
+import suggest1 from "../../assets/Pictures/suggest1.png";
+import suggest2 from "../../assets/Pictures/suggest2.png";
+import suggest3 from "../../assets/Pictures/suggest3.png";
 import { DownOutlined } from '@ant-design/icons';
 import type { MenuProps } from 'antd';
 import { Dropdown, Space } from 'antd';
@@ -45,6 +48,23 @@ function ProductsPage() {
         },
 
     ];
+    const suggest = [
+        {
+            img: suggest1,
+            CODE: "000000002",
+            DESCRIPTION: "suggest1",
+        },
+        {
+            img: suggest2,
+            CODE: "000000003",
+            DESCRIPTION: "suggest2",
+        },
+        {
+            img: suggest3,
+            CODE: "000000004",
+            DESCRIPTION: "suggest3",
+        },
+    ]
     const notedes = ", ";
     const items: MenuProps['items'] = [
         {
@@ -57,13 +77,12 @@ function ProductsPage() {
         },
         {
             label: (
-              <a target="_blank" rel="noopener noreferrer" href="">
-                &nbsp;&nbsp;&nbsp;&nbsp;note dad &nbsp;&nbsp;&nbsp;&nbsp;
-              </a>
+                <a target="_blank" rel="noopener noreferrer" href="">
+                    &nbsp;&nbsp;&nbsp;&nbsp;note dad &nbsp;&nbsp;&nbsp;&nbsp;
+                </a>
             ),
             key: '1',
-          },];
-    const suggest 
+        },];
     return (
         <>
             <div className="productspage">
@@ -119,13 +138,13 @@ function ProductsPage() {
                                         <p className="tastingnote">{
                                             product.NoteList.map((note, index) => {
                                                 return (
-                                                    <Dropdown menu={{ items }} placement="topRight" >    
-                                                            <Space>
-                                                                {note.Description + ", "}
-                                                            </Space>
+                                                    <Dropdown menu={{ items }} placement="topRight" >
+                                                        <Space>
+                                                            {note.Description + ", "}
+                                                        </Space>
                                                     </Dropdown>
                                                 )
-                                            }) }
+                                            })}
                                         </p>
                                     </div>
                                 </div>
@@ -136,6 +155,21 @@ function ProductsPage() {
 
                 <div className="suggestion">
                     <h1 className="suggestion-title">You may also like</h1>
+                    <Row gutter={[8, 8]} className="suggestion-content">
+
+                        {suggest.map((suggest, index) => {
+                            return (
+                                <Col xs={24} sm={8} md={8} className="suggestions" >
+                                    <div className="suggest-area">
+                                        <img src={suggest.img}></img>
+                                        <h2>{suggest.DESCRIPTION}</h2>
+                                        <p>{suggest.CODE}</p>
+                                    </div>
+                                </Col>
+                            );
+                        })}
+
+                    </Row>
                 </div>
             </div>
         </>
