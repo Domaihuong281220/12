@@ -1,5 +1,5 @@
 import { Col, Row } from "antd";
-import React from "react";
+import React, { useRef, useEffect, useState } from "react";
 import "./style.css";
 import product1 from "../../assets/Pictures/product1.jpg";
 import product1_2 from "../../assets/Pictures/product1-2.jpg";
@@ -7,6 +7,7 @@ import suggest1 from "../../assets/Pictures/suggest1.png";
 import suggest2 from "../../assets/Pictures/suggest2.png";
 import suggest3 from "../../assets/Pictures/suggest3.png";
 import { DownOutlined } from '@ant-design/icons';
+import ReactImageMagnify from 'react-image-magnify';
 import type { MenuProps } from 'antd';
 import { Dropdown, Space } from 'antd';
 function ProductsPage() {
@@ -65,7 +66,6 @@ function ProductsPage() {
             DESCRIPTION: "suggest3",
         },
     ]
-    const notedes = ", ";
     const items: MenuProps['items'] = [
         {
             label: (
@@ -83,6 +83,9 @@ function ProductsPage() {
             ),
             key: '1',
         },];
+
+
+
     return (
         <>
             <div className="productspage">
@@ -161,7 +164,7 @@ function ProductsPage() {
                             return (
                                 <Col xs={24} sm={8} md={8} className="suggestions" >
                                     <div className="suggest-area">
-                                        <img src={suggest.img}></img>
+                                        <img alt="ljhljhljughljug" src={suggest.img} ></img>
                                         <h2>{suggest.DESCRIPTION}</h2>
                                         <p>{suggest.CODE}</p>
                                     </div>

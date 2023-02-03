@@ -269,7 +269,7 @@ ul{
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 100vh;
+    height: 200vh;
     background-color: white;
 }
 .product-content{
@@ -281,6 +281,7 @@ ul{
     align-items: center;
     width: 100%;
     height: 100%;
+    padding-top: 10rem;
 }
 .product-img1{
     position: absolute;
@@ -307,7 +308,7 @@ ul{
     height: 100vh;
     width: 100%;
     background-color: white;
-    padding: 1rem 0;
+    padding: 8rem 0;
     
 }
 .product_description{
@@ -376,4 +377,48 @@ ul{
 }
 ul{
     text-align: right !important;
-}}
+}
+.suggestion{
+    width: 100%;
+}
+.suggestion-content{
+    width: 100%;
+    padding: 5rem 10rem !important;
+}
+.suggestion-title{
+    color: #1a521c;
+    text-align: center;
+    padding-top: 15rem !important;
+}
+.suggest-area{
+    width: 100%;
+}
+.suggestimg{
+    width: 100%;
+    position: relative;
+}
+.suggest-area img{
+    width: 100%;
+}
+.imgzoom{
+    position: absolute;
+    left: 0;
+    transform: scale(1.5);
+    pointer-events: none;
+    --zoom-x: 50%;
+    --zoom-y: 50%;
+    clip-path: circle(100px at var(--zoom-x) var(--zoom-y));
+}
+.suggestions{
+    text-align: center;
+}
+.suggestions h2{
+    color: #1a521c;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.suggestions p{
+    font-family: 'Prompt', sans-serif;
+    color: rgba(65, 65, 65, 0.617);}
+
+}

@@ -13,7 +13,7 @@ const handlerError = (error) => {
 };
 request.interceptors.request.use((config) => {
   // const token = sessionStorage.getItem("token");
-  config.headers.Authorization = "Basic " + btoa("LuongDL:123456");
+  config.headers.Authorization = "Basic " + btoa("Administrator:");
   return config;
 });
 

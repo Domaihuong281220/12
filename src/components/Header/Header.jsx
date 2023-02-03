@@ -13,15 +13,14 @@ function Header(props) {
   const { t } = props;
   const navigate = useNavigate();
 
-  const handleNavigateDayCare = () => {
-    navigate("/daycare")
-  }
+
   const { Search } = Input;
   const suffix = (
     <AudioOutlined
       style={{
         fontSize: 16,
-        color: "black",
+        color:"black",
+       //Khoilr
       }}
     />
   );
