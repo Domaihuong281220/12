@@ -11,7 +11,6 @@ import { useState } from 'react';
 
 function Header(props) {
   const { t } = props;
-  const navigate = useNavigate();
 
 
   const { Search } = Input;
