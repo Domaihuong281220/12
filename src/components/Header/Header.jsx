@@ -12,7 +12,7 @@ import { useState } from 'react';
 function Header(props) {
   const { t } = props;
 
-
+  
   const { Search } = Input;
   const suffix = (
     <AudioOutlined
@@ -23,8 +23,9 @@ function Header(props) {
       }}
     />
   );
+  const navigate = useNavigate();
   const [size, setSize] = useState('large');
-  const onSearch = (value: string) => console.log(value); 
+  // const onSearch = (value: string) => console.log(value); 
 
   return (
     <div className="landingpage-header">
@@ -37,7 +38,7 @@ function Header(props) {
               enterButton="Search"
               size="large"
               suffix={suffix}
-              onSearch={onSearch}
+              onSearch={navigate('/products')}
             />
           </div>
         </Col>

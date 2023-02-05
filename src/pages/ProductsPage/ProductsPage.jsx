@@ -8,12 +8,27 @@ import suggest2 from "../../assets/Pictures/suggest2.png";
 import suggest3 from "../../assets/Pictures/suggest3.png";
 import { DownOutlined } from '@ant-design/icons';
 import ReactImageMagnify from 'react-image-magnify';
+import { AudioOutlined } from '@ant-design/icons';
+import { useNavigate } from "react-router-dom";
 import type { MenuProps } from 'antd';
+import { Input } from 'antd';
 import { Dropdown, Space } from 'antd';
+import Search from "antd/es/input/Search";
 function ProductsPage() {
+    const { Search } = Input;
+    const navigate = useNavigate();
+    const suffix = (
+        <AudioOutlined
+            style={{
+                fontSize: 16,
+                color: "black",
+                //Khoilr
+            }}
+        />
+    );
     const data = [
         {
-            CODE: "Sayings",
+            CODE: "000000005",
             VARIETAL: "Trịnh Vân Thương",
             ALTITUDETO: "0",
             ROASTPURPOSE: "joinUs",
@@ -107,6 +122,10 @@ function ProductsPage() {
                                         <h2 className="productsource">source</h2>
                                         <table className="productinfo-table source-table">
                                             <tr className="productinfo-table row row1">
+                                                <td className="productinfo1 column1 productinfo-table">CODE</td>
+                                                <td className="productinfo1-data column2 productinfo-table">{product.CODE}</td>
+                                            </tr>
+                                            <tr className="productinfo-table row row1">
                                                 <td className="productinfo1 column1 productinfo-table">VARIETAL</td>
                                                 <td className="productinfo1-data column2 productinfo-table">{product.VARIETAL}</td>
                                             </tr>
@@ -158,12 +177,21 @@ function ProductsPage() {
 
                 <div className="suggestion">
                     <h1 className="suggestion-title">You may also like</h1>
+                    <div className="searchbar-productspage">
+                        <Search
+                            placeholder="Search for more"
+                            enterButton="Search"
+                            size="large"
+                            suffix={suffix}
+                            onSearch={navigate("/products")}
+                        />
+                    </div>
                     <Row gutter={[8, 8]} className="suggestion-content">
 
                         {suggest.map((suggest, index) => {
                             return (
                                 <Col xs={24} sm={8} md={8} className="suggestions" >
-                                    <div className="suggest-area">
+                                    <div className="suggest-area" id={index}>
                                         <img alt="ljhljhljughljug" src={suggest.img} ></img>
                                         <h2>{suggest.DESCRIPTION}</h2>
                                         <p>{suggest.CODE}</p>
@@ -174,6 +202,7 @@ function ProductsPage() {
 
                     </Row>
                 </div>
+
             </div>
         </>
     )

@@ -283,7 +283,7 @@
     
     .brandname {
         position: absolute;
-        top: 60%;
+        top: 65%;
         left: 50%;
         transform: translate(-50%, -50%);
         text-align: center;
@@ -303,7 +303,7 @@
     
     .slogan3 {
         position: absolute;
-        top: 75%;
+        top: 80%;
         left: 50%;
         transform: translate(-50%, -50%);
         text-align: center;
@@ -319,7 +319,7 @@
     
     .headerbtn {
         position: absolute;
-        top: 85%;
+        top: 90%;
         left: 50%;
         transform: translate(-50%, -50%);
         text-align: center;
