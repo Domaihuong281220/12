@@ -115,10 +115,10 @@ function ProductsPage() {
     console.log(id)
         dispatch(SearchRequestaction(id));
     }, []);
-    const isLoadingActivities = useSelector(
+    const FoundProduct = useSelector(
         (state) => state.search.ProductInfo
     );
-     console.log(isLoadingActivities, "isLoadingActivities");
+     console.log(FoundProduct, "isLoadingActivities");
     
 
 
@@ -136,46 +136,47 @@ function ProductsPage() {
                         </div>
                     </Col>
                     <Col xs={24} sm={12} md={12} className="product-info">
-                        {data.map((product, index) => {
+                        {FoundProduct.map((product) => {
+                            
                             return (
-                                <div className="product_description" key={index}>
-                                    <h1 classname="productname">{product.DESCRIPTION}</h1>
+                                <div className="product_description" >
+                                    <h1 classname="productname">{product.Description}</h1>
                                     <div className="infotables">
                                         <h2 className="productsource">source</h2>
                                         <table className="productinfo-table source-table">
                                             <tr className="productinfo-table row row1">
                                                 <td className="productinfo1 column1 productinfo-table">CODE</td>
-                                                <td className="productinfo1-data column2 productinfo-table">{product.CODE}</td>
+                                                <td className="productinfo1-data column2 productinfo-table">{id}</td>
                                             </tr>
                                             <tr className="productinfo-table row row1">
                                                 <td className="productinfo1 column1 productinfo-table">VARIETAL</td>
-                                                <td className="productinfo1-data column2 productinfo-table">{product.VARIETAL}</td>
+                                                <td className="productinfo1-data column2 productinfo-table">{product.Varietal}</td>
                                             </tr>
                                             <tr className="productinfo-table row">
                                                 <td className="productinfo2 column1 productinfo-table">ORIGIN</td>
-                                                <td className="productinfo2-data column2 productinfo-table">{product.ORIGIN}</td>
+                                                <td className="productinfo2-data column2 productinfo-table">{product.Origin}</td>
                                             </tr>
                                             <tr className="productinfo-table row">
                                                 <td className="productinfo3 column1 productinfo-table">ALTITUDE</td>
-                                                <td className="productinfo3-data column2 productinfo-table">{product.ALTITUDEFROM} - {product.ALTITUDETO}</td>
+                                                <td className="productinfo3-data column2 productinfo-table">{product.AltitudeFrom} - {product.AltitudeTo}</td>
                                             </tr>
                                             <tr className="productinfo-table row">
                                                 <td className="productinfo1 column1 productinfo-table">BEAN</td>
-                                                <td className="productinfo1-data column2 productinfo-table">{product.BEAN}</td>
+                                                <td className="productinfo1-data column2 productinfo-table">{product.Bean}</td>
                                             </tr>
                                             <tr className="productinfo-table row">
                                                 <td className="productinfo2 column1 productinfo-table">ROAST DATE</td>
-                                                <td className="productinfo2-data column2 productinfo-table">{product.ROASTDATE}</td>
+                                                <td className="productinfo2-data column2 productinfo-table">{product.RoastDate}</td>
                                             </tr>
                                             <tr className="productinfo-table row">
                                                 <td className="productinfo3 column1 productinfo-table">GRADE</td>
-                                                <td className="productinfo3-data column2 productinfo-table">{product.GRADE}</td>
+                                                <td className="productinfo3-data column2 productinfo-table">{product.Grade}</td>
                                             </tr>
                                         </table>
                                         <h2 className="productprocess">processing method</h2>
                                         <table className="productinfo-table process-table">
                                             <tr className="productinfo-table row row1">
-                                                <td className="productinfo1-data column3 productinfo-table">{product.PROCESS}</td>
+                                                <td className="productinfo1-data column3 productinfo-table">{product.Process}</td>
                                             </tr>
                                         </table>
                                         <h2 className="productbrewing">tasting notes</h2>
@@ -214,10 +215,11 @@ function ProductsPage() {
                         {suggest.map((suggest, index) => {
                             return (
                                 <Col xs={24} sm={8} md={8} className="suggestions" >
-                                    <div className="suggest-area" id={index}>
+                                    <div className="suggest-area" id={index} onClick={() => dispatch(SearchRequestaction(suggest.CODE))}>
                                         <img alt="ljhljhljughljug" src={suggest.img} ></img>
                                         <h2>{suggest.DESCRIPTION}</h2>
                                         <p>{suggest.CODE}</p>
+                                         
                                     </div>
                                 </Col>
                             );

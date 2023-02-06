@@ -83,11 +83,6 @@ function Header(props) {
             Your home brew just got better.
           </div>
         </Col>
-        <Col className="gutter-row headerbtn" span={24}>
-          <div>
-            <Button ghost>Learn more</Button>
-          </div>
-        </Col>
       </Row>
     </div>
   );

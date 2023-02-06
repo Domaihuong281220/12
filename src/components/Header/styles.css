@@ -283,7 +283,7 @@
     
     .brandname {
         position: absolute;
-        top: 65%;
+        top: 70%;
         left: 50%;
         transform: translate(-50%, -50%);
         text-align: center;
@@ -303,11 +303,11 @@
     
     .slogan3 {
         position: absolute;
-        top: 80%;
+        top: 90%;
         left: 50%;
         transform: translate(-50%, -50%);
         text-align: center;
-        color: #c97230;
+        color: #eac9af;
         text-shadow: -1px 0 rgba(102, 58, 8, 0.845), 0 5px 5px rgba(61, 38, 8, 0.511), 5px 0 10px rgba(165, 112, 82, 0.868), 0 -1px rgba(49, 37, 9, 0.831);
         font-size: 1.3rem;
         font-weight: 600;
