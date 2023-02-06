@@ -6,7 +6,8 @@ const url = {
   daycare: "/DogsPark2/V1/DayCare",
   activities: "/DogsPark2/V1/Activities",
   dogbreeds: "/DogsPark2/V1/Breeds",
-  metadata: "/V1/CoffeeProduct"
+  metadata: "/V1/CoffeeProduct",
+  findproduct: "/V1/FindCoffeeProduct",
 };
 
 const instance = axios.create({

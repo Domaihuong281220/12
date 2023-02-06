@@ -9,13 +9,19 @@ import suggest3 from "../../assets/Pictures/suggest3.png";
 import { DownOutlined } from '@ant-design/icons';
 import ReactImageMagnify from 'react-image-magnify';
 import { AudioOutlined } from '@ant-design/icons';
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams  } from "react-router-dom";
 import type { MenuProps } from 'antd';
 import { Input } from 'antd';
 import { Dropdown, Space } from 'antd';
 import Search from "antd/es/input/Search";
+import { useDispatch, useSelector } from "react-redux";
+import { SearchRequestaction } from './store/action';
+
+
+
 function ProductsPage() {
     const { Search } = Input;
+    
     const navigate = useNavigate();
     const suffix = (
         <AudioOutlined
@@ -99,9 +105,25 @@ function ProductsPage() {
             key: '1',
         },];
 
+    // api
+
+    let { id } = useParams();
+    // console.log(id,"24356465646565454");
+    const dispatch = useDispatch();
+    
+    useEffect(() => {
+    console.log(id)
+        dispatch(SearchRequestaction(id));
+    }, []);
+    const isLoadingActivities = useSelector(
+        (state) => state.search.ProductInfo
+    );
+     console.log(isLoadingActivities, "isLoadingActivities");
+    
 
 
     return (
+        
         <>
             <div className="productspage">
                 <Row gutter={[8, 8]} className="product-content">
@@ -183,9 +205,10 @@ function ProductsPage() {
                             enterButton="Search"
                             size="large"
                             suffix={suffix}
-                            onSearch={navigate("/products")}
+                            onSearch={() =>navigate("/products")}
                         />
                     </div>
+                    
                     <Row gutter={[8, 8]} className="suggestion-content">
 
                         {suggest.map((suggest, index) => {

@@ -8,28 +8,59 @@ import { Input, Space } from 'antd';
 import { DownloadOutlined } from '@ant-design/icons';
 import { Button, Divider, Radio } from 'antd';
 import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { SearchRequestaction } from './Store/action';
 
 function Header(props) {
   const { t } = props;
-
-  
   const { Search } = Input;
   const suffix = (
     <AudioOutlined
       style={{
         fontSize: 16,
-        color:"black",
-       //Khoilr
+        color: "black",
+        //Khoilr
       }}
     />
   );
+  const dispatch = useDispatch();
   const navigate = useNavigate();
   const [size, setSize] = useState('large');
-  // const onSearch = (value: string) => console.log(value); 
+  // const onSearch = (value) => dispatch(SearchRequestaction(value)); 
+  const onSearch = (value) => {
+    if (value !== null || value !== undefined || value !== "") {
+      navigate(`/products/${value}`);
+}};
+  //Api
+  // const GetProduct = () => {
+  //   const MainProduct = [];
+  //   const SuggestProducts = [];
+  //   var tempListStr = "";
+
+  //   for (let i = 0; i < allActivities.length; i++) {
+  //     MainProduct.push({
+  //       key: i + 1,
+  //       Activity_EN: allActivities[i].Activity_EN,
+  //       Categorize_EN: allActivities[i].Categorize_EN,
+  //       Priority: allActivities[i].Priority,
+  //       Price: allActivities[i].Price,
+  //       PriorityOrder: allActivities[i].PriorityOrder,
+  //       Code: allActivities[i].Code
+  //     });
+  //     if (allActivities[i][selectedPackage.label] == "Yes") {
+  //       SuggestProducts.push(i + 1);
+  //       tempListStr = tempListStr + allActivities[i].Code + ",";
+  //     }
+  //   }
+  //   setActivitiesData(MainProduct);
+  //   setSelectedRows(SuggestProducts);
+  //   setListStr(tempListStr)
+  // };
 
   return (
     <div className="landingpage-header">
       <Row gutter={[16, 24]}>
+
 
         <Col className="gutter-row searchbar" span={24}>
           <div>
@@ -38,7 +69,7 @@ function Header(props) {
               enterButton="Search"
               size="large"
               suffix={suffix}
-              onSearch={navigate('/products')}
+              onSearch={onSearch}
             />
           </div>
         </Col>

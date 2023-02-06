@@ -116,7 +116,23 @@ ul{
 }}
 .suggestion-title{
     color: #1a521c;
+    text-align: center;
+    padding: 1rem 2rem !important;
+    margin-top: 5rem !important;
+    width: fit-content;
+    font-size: 3rem;
     font-family: 'Courier New', Courier, monospace;
+    margin-left: 30%;
+    border-top: 1px solid rgba(65, 65, 65, 0.603);
+    border-bottom: 1px solid rgba(65, 65, 65, 0.603);
+}
+.searchbar-productspage{
+    width: 30% !important;
+    margin-left: 30% !important;
+    margin-top: 2rem !important;
+}
+.searchbar-productspage button {
+    background-color: #1a521c;
 }
 @media (max-width:1500px) and (min-width: 1300px) {.productspage{
     display: flex;

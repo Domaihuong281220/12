@@ -28,7 +28,7 @@ function App() {
     <div className="App">
       <Router>
         <Routes>
-          <Route path="/login" element={<LoginPage />} />
+          <Route path="/products" element={<ProductsPage />} />
           <Route path="/*" element={<DefaultLayout />} />
         </Routes>
       </Router>
