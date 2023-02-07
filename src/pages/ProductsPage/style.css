@@ -64,7 +64,6 @@
         padding-top: 8rem;
     }
 
-    .product_description {}
 
     .product_description h1 {
         color: #2f8032;
@@ -236,7 +235,6 @@
         padding: 5rem 0;
     }
 
-    .product_description {}
 
     .product_description h1 {
         color: #2f8032;
@@ -331,7 +329,7 @@
     width: fit-content;
     font-size: 3rem;
     font-family: 'Courier New', Courier, monospace;
-    margin-left: 33%;
+    margin-left: 31%;
     border-top: 1px solid rgba(65, 65, 65, 0.603);
     border-bottom: 1px solid rgba(65, 65, 65, 0.603);
 }
@@ -369,7 +367,8 @@
 
 .suggestions p {
     font-family: 'Prompt', sans-serif;
-    color: rgba(197, 194, 194, 0.952);
+    /* color: rgba(15, 6, 6, 0.952); */
+    filter: invert(100%);
 }
 
 @media (max-width:1300px) and (min-width: 1000px) {
@@ -428,7 +427,6 @@
 
     }
 
-    .product_description {}
 
     .product_description h1 {
         color: #1a521c;
