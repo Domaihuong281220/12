@@ -31,7 +31,7 @@ function Footer(props) {
           <div>(04) 298 3985 2092</div>
           <div>+76 209 1092 4095</div>
           <div>info@mollysrestaurant.com</div>
-          <Button>Contact us</Button>
+          {/* <Button>Contact us</Button> */}
         </Col>
       </Row>
     </div>
