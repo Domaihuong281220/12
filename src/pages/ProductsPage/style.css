@@ -2,9 +2,6 @@
     .productspage {
         background-image: url(../../assets/Pictures/background2.png);
         background-size: 100% 130rem;
-        
-
-        
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -192,7 +189,7 @@
 @media (max-width:1500px) and (min-width: 1300px) {
     .productspage {
         background-image: url(../../assets/Pictures/background2.png);
-        
+        background-size: 100% 130rem;
 
 
         display: flex;
@@ -307,7 +304,7 @@
         line-height: calc(1 + .8 / 1.0);
         font-size: 1rem;
         font-weight: 400;
-        color: #0a0101a6;
+        color: #cfd0cf;
     }
 
     ul {
@@ -327,10 +324,10 @@
 }
 
 .suggestion-title {
-    color: #28772b;
+    color: #19a81d;
     text-align: center;
     padding: 1rem 2rem !important;
-    margin-top: -8rem !important;
+    margin-top: 2em !important;
     width: fit-content;
     font-size: 3rem;
     font-family: 'Courier New', Courier, monospace;
@@ -372,7 +369,7 @@
 
 .suggestions p {
     font-family: 'Prompt', sans-serif;
-    color: rgba(153, 150, 150, 0.952);
+    color: rgba(197, 194, 194, 0.952);
 }
 
 @media (max-width:1300px) and (min-width: 1000px) {

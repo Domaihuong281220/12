@@ -27,62 +27,8 @@ function ProductsPage() {
             }}
         />
     );
-    // const data = [
-    //     {
-    //         CODE: "000000005",
-    //         VARIETAL: "Trịnh Vân Thương",
-    //         ALTITUDETO: "0",
-    //         ROASTPURPOSE: "joinUs",
-    //         ORIGIN: "Vietnam",
-    //         GRADE: "G3",
-    //         ALTITUDEFROM: "0",
-    //         PROCESS: "Natural",
-    //         BEAN: "Arabica",
-    //         ROASTDATE: "1/10/2018 12:00:00 AM",
-    //         DESCRIPTION: "Cafe Amaratto",
-    //         NoteList: [
-    //             {
-    //                 "Description": "Nutmeg",
-    //                 "Code": "000000032"
-    //             },
-    //             {
-    //                 "Description": "Clove",
-    //                 "Code": "000000034"
-    //             },
-    //             {
-    //                 "Description": "Almond",
-    //                 "Code": "000000026"
-    //             },
-    //             {
-    //                 "Description": "Jasmine",
-    //                 "Code": "000000019"
-    //             },
-    //             {
-    //                 "Description": "Hazelnut",
-    //                 "Code": "000000027"
-    //             }
-    //         ],
-    //     },
 
-    // ];
-    // const suggest = [
-    //     {
-    //         img: suggest1,
-    //         CODE: "000000002",
-    //         DESCRIPTION: "suggest1",
-    //     },
-    //     {
-    //         img: suggest2,
-    //         CODE: "000000003",
-    //         DESCRIPTION: "suggest2",
-    //     },
-    //     {
-    //         img: suggest3,
-    //         CODE: "000000004",
-    //         DESCRIPTION: "suggest3",
-    //     },
-    // ]
-    const items= [
+    const items = [
         {
             label: (
                 <a target="_blank" rel="noopener noreferrer" href="">
@@ -108,14 +54,14 @@ function ProductsPage() {
     const onSearch = (value) => {
         navigate(`/products/${value}`);
     }
-    
+
 
     useEffect(() => {
         dispatch(SearchRequestaction(id));
         window.scrollTo(0, 0);
     }, [id]);
     const SuggestOnClick = (Codevalue) => {
-        navigate(`/products/${Codevalue}`);	
+        navigate(`/products/${Codevalue}`);
     }
 
     useEffect(() => {
@@ -126,8 +72,8 @@ function ProductsPage() {
     const FoundProduct = useSelector(
         (state) => state.search.ProductInfo
     );
-    console.log(FoundProduct, "isLoadingActivities");
-
+    console.log(FoundProduct[0].NoteList, "isLoadingActivities");
+    const [Flavor,setFlavor] = useState([]);
 
 
     return (
@@ -196,6 +142,7 @@ function ProductsPage() {
                                         <h2 className="productbrewing">tasting notes</h2>
                                         <p className="tastingnote">{
                                             product.NoteList.map((note, index) => {
+                                                
                                                 return (
                                                     <Dropdown menu={{ items }} placement="topRight" >
                                                         <Space>
@@ -228,28 +175,28 @@ function ProductsPage() {
 
                         {FoundProduct.map((product) => {
                             return (
-                            // <Col xs={24} sm={8} md={8} className="suggestions" >
-                            //     <div className="suggest-area" id={index} onClick={() => dispatch(SearchRequestaction(suggest.CODE))}>
-                            //         <img alt="ljhljhljughljug" src={suggest.img} ></img>
-                            //         <h2>{suggest.DESCRIPTION}</h2>
-                            //         <p>{suggest.CODE}</p>
+                                // <Col xs={24} sm={8} md={8} className="suggestions" >
+                                //     <div className="suggest-area" id={index} onClick={() => dispatch(SearchRequestaction(suggest.CODE))}>
+                                //         <img alt="ljhljhljughljug" src={suggest.img} ></img>
+                                //         <h2>{suggest.DESCRIPTION}</h2>
+                                //         <p>{suggest.CODE}</p>
 
-                            //     </div>
-                            // </Col>
-                            
-                            
-                            product.RelevantProduct.map((suggest) => {
-                                console.log(suggest, "OOOopopopopopo")
-                                return (
-                                    <Col xs={24} sm={8} md={8} className="suggestions" >
-                                        <div className="suggest-area" onClick={()=>SuggestOnClick(suggest.Code)} >
-                                            <img alt="ljhljhljughljug" src={suggest.PictureURL} ></img>
-                                            <h2>{suggest.Description}</h2>
-                                            <p>{suggest.Code}</p>
-                                        </div>
-                                    </Col>
-                                )
-                            }));
+                                //     </div>
+                                // </Col>
+
+
+                                product.RelevantProduct.map((suggest) => {
+                                    console.log(suggest, "OOOopopopopopo")
+                                    return (
+                                        <Col xs={24} sm={8} md={8} className="suggestions" >
+                                            <div className="suggest-area" onClick={() => SuggestOnClick(suggest.Code)} >
+                                                <img alt="ljhljhljughljug" src={suggest.PictureURL} ></img>
+                                                <h2>{suggest.Description}</h2>
+                                                <p>{suggest.Code}</p>
+                                            </div>
+                                        </Col>
+                                    )
+                                }));
                         })}
 
                     </Row>
