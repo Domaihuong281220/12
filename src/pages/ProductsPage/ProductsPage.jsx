@@ -1,18 +1,12 @@
 import { Col, Row } from "antd";
 import React, { useRef, useEffect, useState } from "react";
 import "./style.css";
-import product1 from "../../assets/Pictures/product1.jpg";
-import product1_2 from "../../assets/Pictures/product1-2.jpg";
-import suggest1 from "../../assets/Pictures/suggest1.png";
-import suggest2 from "../../assets/Pictures/suggest2.png";
-import suggest3 from "../../assets/Pictures/suggest3.png";
-import { DownOutlined } from '@ant-design/icons';
-import ReactImageMagnify from 'react-image-magnify';
+
 import { AudioOutlined } from '@ant-design/icons';
 import { useNavigate, useParams } from "react-router-dom";
-import type { MenuProps } from 'antd';
+import { Button, Dropdown } from 'antd';
 import { Input } from 'antd';
-import { Dropdown, Space } from 'antd';
+import { Space } from 'antd';
 import Search from "antd/es/input/Search";
 import { useDispatch, useSelector } from "react-redux";
 import { SearchRequestaction } from './store/action';
@@ -88,7 +82,7 @@ function ProductsPage() {
     //         DESCRIPTION: "suggest3",
     //     },
     // ]
-    const items: MenuProps['items'] = [
+    const items= [
         {
             label: (
                 <a target="_blank" rel="noopener noreferrer" href="">
@@ -99,7 +93,7 @@ function ProductsPage() {
         },
         {
             label: (
-                <a target="_blank" rel="noopener noreferrer" href="">
+                <a target="_blank" rel="noopener noreferrer">
                     &nbsp;&nbsp;&nbsp;&nbsp;Jasmine &nbsp;&nbsp;&nbsp;&nbsp;
                 </a>
             ),
