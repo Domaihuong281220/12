@@ -224,9 +224,9 @@
         height: 20rem;
     }
 
-    
 
-    
+
+
 
     .product-info {
         height: 100vh;
@@ -325,11 +325,11 @@
     color: #19a81d;
     text-align: center;
     padding: 1rem 2rem !important;
-    margin-top: 2em !important;
+    margin-top: -10rem !important;
     width: fit-content;
     font-size: 3rem;
     font-family: 'Courier New', Courier, monospace;
-    margin-left: 31%;
+    margin-left: 32%;
     border-top: 1px solid rgba(65, 65, 65, 0.603);
     border-bottom: 1px solid rgba(65, 65, 65, 0.603);
 }
@@ -384,6 +384,7 @@
 
     .product-content {
         width: 100%;
+        height: 100%;
     }
 
     .product-img {
@@ -392,7 +393,7 @@
         align-items: center;
         width: 100%;
         height: 100%;
-        padding-top: 10rem;
+        padding-top: 30rem;
     }
 
     .product-img1 {
@@ -401,29 +402,19 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        width: 90%;
+        height: 85%;
+    }
+    .product-img1 img {
         width: 100%;
         height: 100%;
-    }
-
-    .product-img2 {
-        position: absolute;
-        z-index: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 100%;
-    }
-
-    .product-img1:hover {
-        display: none;
     }
 
     .product-info {
         height: 100vh;
         width: 100%;
         background-color: white;
-        padding: 8rem 0;
+        padding: 20rem 0;
 
     }
 
@@ -507,14 +498,14 @@
 
     .suggestion-content {
         width: 100%;
-        padding: 5rem 10rem !important;
+        padding: 0rem 10rem !important;
     }
 
     .suggestion-title {
         color: #135315;
         text-align: center;
         padding: 1rem 2rem !important;
-        margin-top: 15rem !important;
+        margin-top: 25rem !important;
         width: fit-content;
         font-size: 3rem;
         font-family: 'Courier New', Courier, monospace;
@@ -526,7 +517,7 @@
     .searchbar-productspage {
         width: 30% !important;
         margin-left: 35%;
-        margin-top: 2rem !important;
+        margin-top: 5rem !important;
     }
 
     .searchbar-productspage button {
@@ -535,26 +526,17 @@
 
     .suggest-area {
         width: 100%;
+
     }
 
     .suggestimg {
         width: 100%;
-        position: relative;
     }
 
     .suggest-area img {
         width: 100%;
     }
 
-    .imgzoom {
-        position: absolute;
-        left: 0;
-        transform: scale(1.5);
-        pointer-events: none;
-        --zoom-x: 50%;
-        --zoom-y: 50%;
-        clip-path: circle(100px at var(--zoom-x) var(--zoom-y));
-    }
 
     .suggestions {
         text-align: center;
