@@ -72,7 +72,7 @@ function ProductsPage() {
     const FoundProduct = useSelector(
         (state) => state.search.ProductInfo
     );
-    console.log(FoundProduct[0].NoteList, "isLoadingActivities");
+    console.log(FoundProduct, "isLoadingActivities");
     const [Flavor,setFlavor] = useState([]);
 
 
