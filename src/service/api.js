@@ -8,6 +8,7 @@ const url = {
   dogbreeds: "/DogsPark2/V1/Breeds",
   metadata: "/V1/CoffeeProduct",
   findproduct: "/V1/FindCoffeeProduct",
+  noteHierachy:"/V1/NoteHierarchy"
 };
 
 const instance = axios.create({

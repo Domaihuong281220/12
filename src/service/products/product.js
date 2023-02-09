@@ -7,3 +7,10 @@ export const ProductSearchRequest = (payload) => {
       data: payload,
     });
   };
+
+export const ProductNoteRequest = (payload) => {
+    return request(api.url.baseUrl + api.url.noteHierachy + `?SerialNumber=${payload}`, {
+      method: "get",
+      data: payload,
+    });
+  }
