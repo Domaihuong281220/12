@@ -1,3 +1,4 @@
+@media (max-width:2000px) and (min-width: 1000px) {
 .footer{
   background: url("../../assets/Pictures/coffee7.jpg");
   background-size: cover;
@@ -58,4 +59,38 @@ padding: 5% 45% !important;
   letter-spacing: 0.1rem;
   line-height: 3rem;
   text-shadow: -2px 0 #B76E22, 0 2px 1px #B76E22,      0px 0 1px #B76E22, 0 1px #B76E22;
+}
+}
+@media (max-width:800px) and (min-width: 300px) {
+  .footer{
+    background: url("../../assets/Pictures/coffee7-2.jpg");
+    background-size: 100% 100vh;
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */
+    height: 100vh;
+  }
+  .footer-row1{
+    color: rgb(226, 153, 85);
+    text-shadow: -1px 0 rgba(59, 38, 13, 0.845), 0 5px 5px rgba(61, 38, 8, 0.511),      5px 0 10px rgba(58, 31, 16, 0.868), 0 -1px rgba(14, 10, 2, 0.831);
+    font-family: 'Rampart One', cursive;
+    font-size: 2rem;
+    font-weight: bolder;
+    text-align: center;
+    padding: 2rem 0 0 0;
+  }
+  
+  
+  .footer-row4{
+    margin-top: 25%;
+    font-family: 'Courier New', Courier, monospace;
+    color: #e2c9ac;
+    font-size: 1.2rem;
+    font-weight: bolder;
+    position: absolute;
+    top: 140%;
+    left: 10%;
+    letter-spacing: 0.1rem;
+    line-height: 3rem;
+    text-shadow: -2px 0 #B76E22, 0 2px 1px #B76E22,      0px 0 1px #B76E22, 0 1px #B76E22;
+  }
 }

@@ -298,7 +298,7 @@
         padding: 0;
         margin: 0;
         width: 100%;
-        font-stretch: ;
+        
     }
     
     .slogan3 {
@@ -374,4 +374,148 @@
         width: 100%;
         height: 100%;
     }
+}
+
+/* phone */
+@media (max-width:830px) and (min-width: 300px) {
+.landingpage-header {
+    background: url("../../assets/Pictures/coffee7-2.png");
+    background-size: 100% 100vh;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 1rem;
+    position: relative;
+    z-index: 1;
+}
+
+
+
+.searchbar {
+    padding-left: 8px;
+    padding-right: 8px;
+    position: absolute !important;
+    top: 35% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%);
+    margin-top: 2%;
+}
+
+.searchbar div {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #f7b4a7;
+    font-size: 100%;
+    font-weight: 700;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    z-index: 2;
+}
+
+.searchbar div span span span {
+    padding: 0.5rem 3rem 0.5rem 2rem
+}
+
+.searchbar div span span span span {
+    width: 1rem !important;
+}
+
+.searchbar button {
+    padding: 2rem 2rem !important;
+    display: flex;
+    align-items: center;
+    background-color: #0f4224;
+}
+
+.searchbar button span {
+    padding-left: 1rem !important;
+}
+
+.searchbar input {
+    width: 5rem !important;
+}
+
+.brandname {
+    position: absolute;
+    top: 60%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #D17926;
+    font-size: 6rem;
+    font-weight: 400;
+    font-family: 'Damion', cursive;
+    letter-spacing: 0.2rem;
+    text-shadow: 0.05113359em 0.02222123em 0.0575em rgba(167, 121, 93, 0.83);
+    text-shadow: -1px 0 rgba(0, 0, 0, 0.845), 0 5px 5px rgba(0, 0, 0, 0.511), 5px 0 10px rgba(0, 0, 0, 0.868), 0 -1px rgba(0, 0, 0, 0.831);
+    z-index: 2;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.slogan3 {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #c97230;
+    text-shadow: -1px 0 rgba(102, 58, 8, 0.845), 0 5px 5px rgba(61, 38, 8, 0.511), 5px 0 10px rgba(165, 112, 82, 0.868), 0 -1px rgba(49, 37, 9, 0.831);
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    z-index: 2;
+}
+
+.headerbtn {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #683209;
+    background-color: rgb(192, 149, 32);
+    font-size: 1.3rem;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    z-index: 2;
+    box-sizing: border-box;
+    border-radius: 6px;
+    padding: 0 !important;
+    border-radius: 1.2rem;
+    border: 1px solid rgb(65, 28, 4);;
+}
+
+.headerbtn:hover {
+    background-color: #c7a15a;
+    color: #683209;
+}
+
+.headerbtn div button {
+    border: 1px solid #683209 !important;
+    border-radius: 1.2rem;
+    color: rgb(43, 24, 1) !important;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 0.5rem 3rem !important;
+    height: fit-content;
+    box-shadow: 8px 5px 10px #562c05 !important;
+}
+
+
 }

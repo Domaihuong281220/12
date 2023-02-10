@@ -81,7 +81,7 @@ function ProductsPage() {
         <>
             <div className="productspage">
                 <Row gutter={[8, 8]} className="product-content">
-                    <Col xs={24} sm={12} md={12} className="product-img" >
+                    <Col xs={12} sm={12} md={12} className="product-img" >
                         {FoundProduct.map((product) => {
 
                             return (
@@ -90,12 +90,8 @@ function ProductsPage() {
                                 </div>
                             )
                         })}
-
-                        {/* <div className="product-img2">
-                            <img src={product1_2} alt="product1_2" />
-                        </div> */}
                     </Col>
-                    <Col xs={24} sm={12} md={12} className="product-info">
+                    <Col xs={12} sm={12} md={12} className="product-info">
                         {FoundProduct.map((product) => {
 
                             return (
@@ -175,20 +171,10 @@ function ProductsPage() {
 
                         {FoundProduct.map((product) => {
                             return (
-                                // <Col xs={24} sm={8} md={8} className="suggestions" >
-                                //     <div className="suggest-area" id={index} onClick={() => dispatch(SearchRequestaction(suggest.CODE))}>
-                                //         <img alt="ljhljhljughljug" src={suggest.img} ></img>
-                                //         <h2>{suggest.DESCRIPTION}</h2>
-                                //         <p>{suggest.CODE}</p>
-
-                                //     </div>
-                                // </Col>
-
-
                                 product.RelevantProduct.map((suggest) => {
                                     console.log(suggest, "OOOopopopopopo")
                                     return (
-                                        <Col xs={24} sm={8} md={8} className="suggestions" >
+                                        <Col xs={8} sm={8} md={8} className="suggestions" >
                                             <div className="suggest-area" onClick={() => SuggestOnClick(suggest.Code)} >
                                                 <img alt="ljhljhljughljug" src={suggest.PictureURL} ></img>
                                                 <h2>{suggest.Description}</h2>
