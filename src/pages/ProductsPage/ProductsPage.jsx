@@ -140,11 +140,11 @@ function ProductsPage() {
                                             product.NoteList.map((note, index) => {
                                                 
                                                 return (
-                                                    <Dropdown menu={{ items }} placement="topRight" >
-                                                        <Space>
-                                                            {note.Description + ", "}
-                                                        </Space>
-                                                    </Dropdown>
+                                                    // <Dropdown menu={{ items }} placement="topRight" >
+                                                    //     <Space>
+                                                            note.Description + ", "
+                                                    //     </Space>
+                                                    // </Dropdown>
                                                 )
                                             })}
                                         </p>
