@@ -1,16 +1,13 @@
-import { Col, Row } from "antd";
+import { Col, notification, Row } from "antd";
 import React, { useRef, useEffect, useState } from "react";
 import "./style.css";
 
 import { AudioOutlined } from '@ant-design/icons';
 import { useNavigate, useParams } from "react-router-dom";
-import { Button, Dropdown } from 'antd';
 import { Input } from 'antd';
-import { Space } from 'antd';
-import Search from "antd/es/input/Search";
 import { useDispatch, useSelector } from "react-redux";
 import { SearchRequestaction } from './store/action';
-
+import { CheckOutlined, CloseOutlined } from "@ant-design/icons";
 
 
 function ProductsPage() {
@@ -23,33 +20,14 @@ function ProductsPage() {
             style={{
                 fontSize: 16,
                 color: "black",
-                //Khoilr
             }}
         />
     );
 
-    const items = [
-        {
-            label: (
-                <a target="_blank" rel="noopener noreferrer" href="">
-                    Grain &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                </a>
-            ),
-            key: '0',
-        },
-        {
-            label: (
-                <a target="_blank" rel="noopener noreferrer">
-                    &nbsp;&nbsp;&nbsp;&nbsp;Jasmine &nbsp;&nbsp;&nbsp;&nbsp;
-                </a>
-            ),
-            key: '1',
-        },];
 
-    // api
 
     let { id } = useParams();
-    // console.log(id,"24356465646565454");
+
     const dispatch = useDispatch();
     const onSearch = (value) => {
         navigate(`/products/${value}`);
@@ -59,21 +37,27 @@ function ProductsPage() {
     useEffect(() => {
         dispatch(SearchRequestaction(id));
         window.scrollTo(0, 0);
-    }, [id]);
+    }, [dispatch, id]);
     const SuggestOnClick = (Codevalue) => {
         navigate(`/products/${Codevalue}`);
     }
 
-    useEffect(() => {
-        console.log(id)
-        dispatch(SearchRequestaction(id));
-    }, []);
+
 
     const FoundProduct = useSelector(
         (state) => state.search.ProductInfo
     );
-    console.log(FoundProduct, "isLoadingActivities");
-    const [Flavor,setFlavor] = useState([]);
+    console.log(FoundProduct.length, "FoundProduct");
+    if (FoundProduct.length === 0) {
+        navigate(`/`);
+        notification.open({
+            message: "There is no product with this Code",
+            placement: "topRight",
+            icon: <CloseOutlined style={{ color: "red" }} />,
+        });
+    };
+
+
 
 
     return (
@@ -138,13 +122,14 @@ function ProductsPage() {
                                         <h2 className="productbrewing">tasting notes</h2>
                                         <p className="tastingnote">{
                                             product.NoteList.map((note, index) => {
-                                                
+                                                console.log(note, "note")
+
                                                 return (
-                                                    // <Dropdown menu={{ items }} placement="topRight" >
-                                                    //     <Space>
-                                                            note.Description + ", "
-                                                    //     </Space>
-                                                    // </Dropdown>
+                                                    <div style={{ background: `#${note.HexColor}` }} className="tastingnotelist" >
+                                                        {note.Description}
+
+                                                    </div>
+
                                                 )
                                             })}
                                         </p>
@@ -172,7 +157,6 @@ function ProductsPage() {
                         {FoundProduct.map((product) => {
                             return (
                                 product.RelevantProduct.map((suggest) => {
-                                    console.log(suggest, "OOOopopopopopo")
                                     return (
                                         <Col xs={8} sm={8} md={8} className="suggestions" >
                                             <div className="suggest-area" onClick={() => SuggestOnClick(suggest.Code)} >

@@ -19,8 +19,9 @@ const search = (state = INIT_STATE, action) => {
         case SEARCH_SUCCESS:
             return { ...state, isLoadingSearch: false, ProductInfo: action.ProductInfo }
         case SEARCH_FAIL:
+            // window.location.href = "./";
             return { ...state, isLoadingSearch: false, error: action.message }
-
+            
         case NOTE_REQUEST:
             return { ...state, isLoadinNote: true }
         case NOTE_SUCCESS:

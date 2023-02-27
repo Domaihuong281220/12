@@ -124,7 +124,7 @@
     ul {
         text-align: right !important;
     }
-}
+
 
 .suggestion-title {
     color: #0f4210;
@@ -170,6 +170,13 @@
     object-position: center;
     border-radius: 1rem;
     /* border: 2px solid #000000 !important; */
+}
+
+.tastingnotelist{
+    display: inline-block;
+    border-radius: 1rem;
+    padding: 0 10px;
+}
 }
 
 @media (max-width:1500px) and (min-width: 1300px) {
@@ -294,6 +301,11 @@
 
     ul {
         text-align: right !important;
+    }
+    .tastingnotelist{
+        display: inline-block;
+        border-radius: 1rem;
+        padding: 0 10px;
     }
 }
 

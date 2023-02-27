@@ -3,6 +3,7 @@ import {
 } from './constant';
 
 export function SearchRequestaction(payload) {
+    // console.log(payload, "payload"	);
     return {
         type: SEARCH_REQUEST,
         payload,
